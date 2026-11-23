@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krajina v kontextu – diplomová práce o agentní AI a krajinných prvcích</title>
+<meta name="description" content="Diplomová práce na Masarykově univerzitě: jak rozsah kontextu mění přesnost a efektivitu agentních AI modelů při návrhu krajinných prvků.">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&amp;family=Literata:opsz,wght@7..72,400;7..72,600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img src="img/logo.svg" alt="" width="40" height="40">Krajina v kontextu</a>
+    <nav aria-label="Hlavní navigace">
+      <ul>
+        <li><a href="#otazka">Výzkumná otázka</a></li>
+        <li><a href="#postup">Postup práce</a></li>
+        <li><a href="#autor">Autor</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Kolik kontextu potřebuje AI agent, aby navrhl krajinný prvek na správném místě?</h1>
+      <p class="lead">Diplomová práce porovnává, jak rozsah dat a pravidel, které agentní AI dostane, mění přesnost a efektivitu jejích návrhů krajinných prvků.</p>
+      <a class="btn" href="#otazka">Přečíst oficiální zadání</a>
+    </div>
+
+    <div class="compare">
+      <input type="radio" name="lvl" id="l1" checked>
+      <input type="radio" name="lvl" id="l2">
+      <input type="radio" name="lvl" id="l3">
+      <div class="tabs" role="radiogroup" aria-label="Úroveň kontextu pro agenta">
+        <label for="l1">Bez kontextu</label>
+        <label for="l2">Terén</label>
+        <label for="l3">Terén, pozemky a pravidla</label>
+      </div>
+      <figure class="stage">
+        <img class="n1" src="img/uroven-1-1200.webp" srcset="img/uroven-1-480.webp 480w, img/uroven-1-800.webp 800w, img/uroven-1-1200.webp 1200w, img/uroven-1-1600.webp 1600w" sizes="(min-width: 60rem) 58vw, 100vw" width="1600" height="1000" alt="Prázdná mapová mřížka s devíti navrženými prvky rozmístěnými bez ladu.">
+        <img class="n2" src="img/uroven-2-1200.webp" srcset="img/uroven-2-480.webp 480w, img/uroven-2-800.webp 800w, img/uroven-2-1200.webp 1200w, img/uroven-2-1600.webp 1600w" sizes="(min-width: 60rem) 58vw, 100vw" width="1600" height="1000" loading="lazy" alt="Mapa terénu s vrstevnicemi a vodním tokem; osm navržených prvků vede podél vrstevnic na svazích.">
+        <img class="n3" src="img/uroven-3-1200.webp" srcset="img/uroven-3-480.webp 480w, img/uroven-3-800.webp 800w, img/uroven-3-1200.webp 1200w, img/uroven-3-1600.webp 1600w" sizes="(min-width: 60rem) 58vw, 100vw" width="1600" height="1000" loading="lazy" alt="Mapa s pozemky, vrstevnicemi, erozně ohroženými svahy a potokem; sedm prvků na svazích a pás podél potoka.">
+        <figcaption>
+          <p class="n1">Agent dostane jen zadání. Prvky umísťuje bez znalosti terénu, pozemků a vodních toků.</p>
+          <p class="n2">Agent zná terén. Prvky vede podél vrstevnic, ale nezná hranice pozemků ani omezení.</p>
+          <p class="n3">Agent zná terén, pozemky, vodní tok i pravidla. Prvky leží na ohrožených svazích a respektují potok.</p>
+          <p class="key"><span class="sw" aria-hidden="true"></span>Červená čára je navržený krajinný prvek. Schémata jsou ilustrační, vznikla programově a nejsou výsledkem výzkumu.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="otazka" class="alt">
+    <div class="wrap two">
+      <div>
+        <h2>Pomáhá agentům víc kontextu, nebo jen víc práce?</h2>
+        <p>Agentní AI modely umí samy hledat data a volat nástroje. Začínají se proto zkoušet i při plánování krajinných opatření. Práce zjišťuje, jestli jim širší kontext skutečně zlepšuje návrhy a jak se při tom mění efektivita.</p>
+      </div>
+      <dl>
+        <dt>Cíl práce</dt>
+        <dd>Ověřit a zhodnotit vliv rozsahu poskytnutého kontextu na přesnost a efektivitu agentních AI modelů při návrhu vybraných krajinných prvků.</dd>
+        <dt>Praktická část</dt>
+        <dd>Proof-of-concept studie srovnává nasazení různé míry kontextu v agentním workflow, případně s vlastním AI agentem.</dd>
+        <dt>Validace</dt>
+        <dd>Výsledky se porovnají a ověří předem stanoveným způsobem ve spolupráci s alespoň jedním odborným konzultantem.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="postup">
+    <div class="wrap">
+      <h2>Práce má čtyři dílčí cíle</h2>
+      <ol class="steps">
+        <li><h3>Rešerše</h3><p>Dostupné zdroje a legislativní rámce pro návrh vybraných krajinných prvků, se zaměřením na otevřené zdroje.</p></li>
+        <li><h3>Mapování</h3><p>Současný stav a možnosti využití agentních AI modelů při návrhu krajinných opatření.</p></li>
+        <li><h3>Proof-of-concept</h3><p>Studie, která srovnává dopad různé míry kontextu na výstupy agentního workflow.</p></li>
+        <li><h3>Odborná validace</h3><p>Hodnocení vygenerovaných výsledků externím konzultantem podle předem stanovené metodiky.</p></li>
+      </ol>
+      <p class="after">Práci uzavře zhodnocení a diskuse výsledků, identifikace limitů řešení a posouzení jeho potenciální škálovatelnosti.</p>
+    </div>
+  </section>
+</main>
+
+<footer id="autor" class="alt">
+  <div class="wrap two">
+    <p><strong>Diplomová práce</strong><br>Masarykova univerzita, Brno</p>
+    <p>Autor: Tomáš<br>Stav: záměr práce. Výsledky studie zatím nejsou k dispozici.</p>
+  </div>
+</footer>
+</body>
+</html>
